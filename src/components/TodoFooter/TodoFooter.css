@@ -1,0 +1,15 @@
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-footer p {
+    font-weight: 600;
+    color: grey
+}
+
+.todo-footer a {
+    font-weight: 600;
+    color: grey;
+    text-decoration: none;
+}

@@ -1,0 +1,27 @@
+.input-container {
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.329);
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    border: none;
+    width: 90%
+}
+
+.input:focus {
+    outline: none;
+}
+
+.add-btn {
+    border: none;
+    padding: 0.3rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(53, 201, 157);
+    color: white;
+    font-weight: 900;
+}
