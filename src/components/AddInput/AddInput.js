@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import "./AddInput.css"
 import { v4 } from "uuid"
-import TodoList from '../TodoList/TodoList'
+//import TodoList from '../TodoList/TodoList'
 
-function AddInput({
+function AddInput ( {
     setTodos, todos
-}) {
+} ) {
 
-    const [todo, setTodo] = useState("")
+    const [ todo, setTodo ] = useState( "" )
 
     const addTodo = () => {
         let updatedTodos = [
@@ -18,21 +18,21 @@ function AddInput({
                 completed: false
             }
         ]
-        setTodos(updatedTodos);
-        setTodo("")
+        setTodos( updatedTodos )
+        setTodo( "" )
     }
 
     return (
         <div className="input-container">
-            <input 
-                className="input" 
-                value={todo} 
-                onChange={(e) => setTodo(e.target.value)}
+            <input
+                className="input"
+                value={ todo }
+                onChange={ ( e ) => setTodo( e.target.value ) }
                 placeholder="Add a new task here..."
             />
-            <button 
+            <button
                 className="add-btn"
-                onClick={addTodo}
+                onClick={ addTodo }
             >
                 Add
             </button>

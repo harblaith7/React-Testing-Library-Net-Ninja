@@ -3,12 +3,16 @@ import Header from '../Header'
 
 // Changed description in each test for eslint errors
 
-// Unit Tests
-it( 'should render same text passed into title prop', async () => {
-  render( <Header title='My Header' /> )
-  const headingElement = screen.getByText( /my header/i )
-  expect( headingElement ).toBeInTheDocument()
+describe( 'Header', () => {
+
+  it( 'should render same text passed into title prop', async () => {
+    render( <Header title='My Header' /> )
+    const headingElement = screen.getByText( /my header/i )
+    expect( headingElement ).toBeInTheDocument()
+  } )
+
 } )
+
 
 // it( 'should render same text passed', () => {
 //   render( <Header title='My Header' /> )
