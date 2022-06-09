@@ -32,9 +32,11 @@ function TodoList({
                 <div>
                     {
                         todos.map((todo, index) => (
-                            <div 
+                            <div
+                                key={index}
                                 className={`todo-item ${todo.completed && "todo-item-active"}`} 
                                 onClick={() => updateTask(todo.id)}
+                                role='listitem'
                             >
                                 {todo.task}
                             </div>
