@@ -1,20 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-import Banner from './components/Banner/Banner';
-import { Switch, Route } from "react-router-dom"
-import TodoPage from './pages/TodoPage/TodoPage';
-import FollowersPage from './pages/FollowersPage/FollowersPage';
+import React, { Component } from "react";
+import ToDos from "./ToDos";
+import "./App.css";
+import AddToDo from "./AddToDo";
 
-function App() {
-  return (
-    <div className="App">
-      <Banner />
-      <Switch>
-        <Route strict exact path="/" component={TodoPage}/>
-        <Route strict exact path="/followers" component={FollowersPage}/>
-      </Switch>
-    </div>
-  );
+class App extends Component {
+  state = {
+    todos: [
+      { id: 1, content: "learn react" },
+      { id: 2, content: "learn react again" },
+    ],
+  };
+
+  deleteToDo = (id) => {
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id;
+    });
+    this.setState({
+      todos,
+    })
+  }
+
+  addToDo = (todo) => {
+    todo.id = Math.random();
+    let todos = [...this.state.todos, todo];
+    this.setState({
+      todos
+    })
+  }
+
+  render() {
+    return (
+      <div className="todo-app container">
+        <h1 className="center purple-text">ToDo's</h1>
+        <ToDos todos={this.state.todos} deleteToDo={this.deleteToDo} />
+        <AddToDo addToDo={this.addToDo} />
+      </div>
+    );
+  }
 }
 
 export default App;
