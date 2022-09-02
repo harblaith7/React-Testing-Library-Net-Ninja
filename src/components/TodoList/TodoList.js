@@ -3,7 +3,7 @@ import TodoFooter from '../TodoFooter/TodoFooter'
 import "./TodoList.css"
 
 function TodoList({
-    todos, setTodos
+    todos = [], setTodos
 }) {
 
     const updateTask = (id) => {
@@ -27,14 +27,15 @@ function TodoList({
     }
 
     return (
-        <div className="todolist-container">
+        <div className="todolist-container" data-testid="todolist-container">
             <div className="todos-container">
                 <div>
                     {
-                        todos.map((todo, index) => (
+                        todos.map(todo => (
                             <div 
-                                className={`todo-item ${todo.completed && "todo-item-active"}`} 
+                                className={`todo-item ${todo.completed ? "todo-item-completed" : ""}`} 
                                 onClick={() => updateTask(todo.id)}
+                                key={todo.id}
                             >
                                 {todo.task}
                             </div>
