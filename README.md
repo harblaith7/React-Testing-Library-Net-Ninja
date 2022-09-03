@@ -8,14 +8,14 @@ This is my take on the tests in the tutorial. Armed with Laith's excellent expla
 
 [30 August 2022]
 * Cloned
-* Cleaned out all tests, leaving only the app (8443455)
+* Cleaned out all tests, leaving only the app
 * Created branch `new_tests` off of `main` for writing tests
 
 [1 September 2022]
-* Tests for Header (7d4f835)
-* Tests for TodoFooter (014fbdd)
+* Tests for Header
+* Tests for TodoFooter
 
 [2 September 2022]
-* Tests for TodoList (464beb3)
-* Tests for AddInput (593daf6)
+* Tests for TodoList
+* Tests for AddInput
 * Mocking using `jest.mock()` and file in `__mocks__` returns `undefined` if the internal function is called; using `jest.mock(fn)` implementation with `mockImplementation()` in tests instead
