@@ -19,3 +19,6 @@ This is my take on the tests in the tutorial. Armed with Laith's excellent expla
 * Tests for TodoList
 * Tests for AddInput
 * Mocking using `jest.mock()` and file in `__mocks__` returns `undefined` if the internal function is called; using `jest.mock(fn)` implementation with `mockImplementation()` in tests instead
+
+[3 September 2022]
+* Tests for FollowersList (have to find a way to move axios mock to its own file - currently not working)
