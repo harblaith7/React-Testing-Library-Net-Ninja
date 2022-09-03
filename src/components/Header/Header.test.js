@@ -21,5 +21,10 @@ describe("Header", () => {
     const header = screen.getByRole("heading");
     expect(header.nodeName).toBe("H1");
   })
+  it("shows HTML title that's passed from parent component", () => {
+    render(<Header title="test-title" />);
+    const header = screen.getByRole("heading");
+    expect(header.title).toBe("test-title");
+  })
 })
 
