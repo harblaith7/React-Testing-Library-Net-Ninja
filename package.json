@@ -24,6 +24,24 @@
     "test-coverage": "react-scripts test --watchAll --coverage --colors",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/*.js",
+      "!src/components/{Banner,Followers}/*.js",
+      "!src/pages/**/*.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+   ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 95,
+        "statements": 95
+      }
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
