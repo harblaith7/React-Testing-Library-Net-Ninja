@@ -7,7 +7,7 @@ Followers ✗
 FollowersList
 FollowersPage ✗
 Header ✓
-Todo ○
+Todo ✓
 TodoFooter ✓
 TodoList ✓
 TodoPage ✗
