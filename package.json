@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watch --colors",
+    "test-coverage": "react-scripts test --watch --coverage --colors",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
